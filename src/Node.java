@@ -1,35 +1,18 @@
-import java.util.ArrayList;
-
 class Node implements Comparable<Node> {
 	private int cost;
-	private ArrayList<String> path;
-
-	public Node(String start) {
-		this(0, start);
-	}
+	private int depth = -1;
+	private String name;
+	private Node parent;
 
 	public Node(int cost, String start) {
 		this.cost = cost;
-		this.path = new ArrayList<String>();
-		this.path.addLast(start);
+		this.name = start;
 	}
 
-	public Node(ArrayList<String> path) {
-		this(0, path);
-	}
-
-	public Node(ArrayList<String> path, String next) {
-		this(0, path, next);
-	}
-
-	public Node(int cost, ArrayList<String> path, String next) {
-		this(cost, path);
-		this.path.addLast(next);
-	}
-
-	public Node(int cost, ArrayList<String> path) {
+	public Node(int cost, String current, Node parent) {
 		this.cost = cost;
-		this.path = path;
+		this.parent = parent;
+		this.name = current;
 	}
 
 	public int compareTo(Node other) {
@@ -37,10 +20,24 @@ class Node implements Comparable<Node> {
 	}
 
 	public String toString() {
-		return String.format("(%s) %s", this.cost, String.join(", ", this.path));
+		return String.format("(%s) %s", this.cost, this.name);
 	}
 
-	public String getCurrent() {
-		return this.path.getLast();
+	public String getName() {
+		return this.name;
+	}
+
+	public Node getParent() {
+		return this.parent;
+	}
+
+	public int getDepth() {
+		if (this.depth == -1) {
+			if (this.parent == null)
+				this.depth = 0;
+			else
+				this.depth = this.getParent().getDepth() + 1;
+		}
+		return this.depth;
 	}
 }
