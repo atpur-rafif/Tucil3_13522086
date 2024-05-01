@@ -1,9 +1,10 @@
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.PriorityQueue;
 
 class Traverse {
-	public static void find(String from, String to, Dictionary dictionary, Traverser traverser) {
+	public static ArrayList<String> find(String from, String to, Dictionary dictionary, Traverser traverser) {
 		PriorityQueue<Node> queue = new PriorityQueue<>(new Comparator<Node>() {
 			@Override // Reverse priority queue, smaller cost, higher priority
 			public int compare(Node o1, Node o2) {
@@ -25,7 +26,7 @@ class Traverse {
 				continue;
 			visited.add(currentWord);
 
-			System.out.println(current);
+			traverser.onNodeVisit(current);
 			if (currentWord.equals(to)) {
 				end = current;
 				break;
@@ -50,10 +51,13 @@ class Traverse {
 		}
 
 		Node curr = end;
+		ArrayList<String> result = new ArrayList<>();
 		System.out.println("Result: ");
 		while (curr != null) {
-			System.out.println(curr.getName() + " " + curr.getDepth());
+			result.addFirst(curr.getName());
 			curr = curr.getParent();
 		}
+
+		return result;
 	}
 }
