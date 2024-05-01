@@ -1,21 +1,11 @@
-import java.util.ArrayList;
-
 class Main {
 	public static void main(String[] args) {
 		Dictionary dictionary = new Dictionary("dictionary.txt");
+		Visitor visitor = (node) -> {
+			System.out.println(node);
+		};
 
-		// BFS
-		ArrayList<String> result = Traverse.find("myth", "lore", dictionary, new Traverser() {
-			@Override
-			public int calculateCost(Node parentNode, String current) {
-				return parentNode.getDepth() + 1;
-			}
-
-			@Override
-			public void onNodeVisit(Node node) {
-				System.out.println(node);
-			}
-		});
-		System.out.println(result);
+		Search bfs = new BFS();
+		System.out.println(bfs.search("myth", "lore", dictionary, visitor));
 	}
 }
