@@ -55,7 +55,6 @@ public class Traverse {
 
 		Node curr = end;
 		ArrayList<String> result = new ArrayList<>();
-		System.out.println("Result: ");
 		while (curr != null) {
 			result.addFirst(curr.getName());
 			curr = curr.getParent();

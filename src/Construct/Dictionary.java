@@ -7,24 +7,20 @@ import java.util.HashSet;
 public class Dictionary {
 	private HashSet<String> words = new HashSet<>();
 
-	public Dictionary(String filepath) {
-		try {
-			FileReader fileReader = new FileReader(filepath);
-			BufferedReader reader = new BufferedReader(fileReader);
+	public Dictionary(String filepath) throws Exception {
+		FileReader fileReader = new FileReader(filepath);
+		BufferedReader reader = new BufferedReader(fileReader);
 
-			String word = reader.readLine();
-			while (word != null) {
-				this.words.add(word);
-				word = reader.readLine();
-			}
-
-			fileReader.close();
-		} catch (Exception e) {
-			System.out.println("Can't read dictionary: " + filepath);
+		String word = reader.readLine();
+		while (word != null) {
+			this.words.add(word);
+			word = reader.readLine();
 		}
+
+		fileReader.close();
 	}
 
-	boolean checkWord(String word) {
+	public boolean checkWord(String word) {
 		return this.words.contains(word);
 	}
 }
