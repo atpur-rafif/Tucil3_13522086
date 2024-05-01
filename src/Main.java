@@ -5,7 +5,7 @@ class Main {
 			System.out.println(node);
 		};
 
-		Finder finder = new UCS();
+		Finder finder = new Greedy();
 		System.out.println(finder.search("myth", "lore", dictionary, visitor));
 	}
 }
