@@ -16,7 +16,7 @@ class Node implements Comparable<Node> {
 	}
 
 	public int compareTo(Node other) {
-		return this.cost - other.cost;
+		return other.cost - this.cost;
 	}
 
 	public String toString() {
@@ -29,6 +29,10 @@ class Node implements Comparable<Node> {
 
 	public Node getParent() {
 		return this.parent;
+	}
+
+	public int getCost() {
+		return this.cost;
 	}
 
 	public int getDepth() {
