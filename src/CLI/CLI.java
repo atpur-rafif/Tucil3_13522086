@@ -44,6 +44,11 @@ public class CLI {
 		long endTime = System.nanoTime();
 		double totalTime = (endTime - startTime) / 1e6;
 
+		if (result.size() == 0) {
+			System.out.println("No path found");
+			return;
+		}
+
 		System.out.println("=====[ Result " + CLI.algorithmToString(algorithm) + " (" + from + " -> " + to + ") ]=====");
 		for (int i = 0; i < result.size(); ++i) {
 			System.out.println((i + 1) + ". " + result.get(i));
