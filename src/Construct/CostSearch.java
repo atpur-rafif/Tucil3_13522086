@@ -5,8 +5,8 @@ import java.util.Comparator;
 import java.util.HashSet;
 import java.util.PriorityQueue;
 
-public class Traverse {
-	public static ArrayList<String> find(String from, String to, Dictionary dictionary, Traverser traverser) {
+public class CostSearch {
+	public static ArrayList<String> search(String from, String to, Dictionary dictionary, CostSearcher traverser) {
 		PriorityQueue<Node> queue = new PriorityQueue<>(new Comparator<Node>() {
 			@Override // Reverse priority queue, smaller cost, higher priority
 			public int compare(Node o1, Node o2) {
@@ -30,7 +30,7 @@ public class Traverse {
 			visited.add(currentWord);
 
 			traverser.onNodeVisit(current);
-			if (currentWord.equals(to)) {
+			if (currentWord.equalsIgnoreCase(to)) {
 				end = current;
 				break;
 			}
@@ -53,13 +53,6 @@ public class Traverse {
 			}
 		}
 
-		Node curr = end;
-		ArrayList<String> result = new ArrayList<>();
-		while (curr != null) {
-			result.addFirst(curr.getName());
-			curr = curr.getParent();
-		}
-
-		return result;
+		return Node.listPath(end);
 	}
 }

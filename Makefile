@@ -3,8 +3,8 @@ SOURCE_CODE=$(call RECUR_WILDCARD,src,*.java)
 
 METHOD=cli
 DICTIONARY=dictionary.txt
-FROM=car
-TO=red
+FROM=jail
+TO=free
 
 run:
 	@javac -d bin $(SOURCE_CODE)

@@ -1,5 +1,7 @@
 package Construct;
 
+import java.util.ArrayList;
+
 public class Node implements Comparable<Node> {
 	private int cost;
 	private int depth = -1;
@@ -52,5 +54,15 @@ public class Node implements Comparable<Node> {
 				this.depth = this.getParent().getDepth() + 1;
 		}
 		return this.depth;
+	}
+
+	public static ArrayList<String> listPath(Node node) {
+		Node curr = node;
+		ArrayList<String> result = new ArrayList<>();
+		while (curr != null) {
+			result.addFirst(curr.getName());
+			curr = curr.getParent();
+		}
+		return result;
 	}
 }
