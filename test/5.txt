@@ -1,0 +1,44 @@
+
+
+
+java -cp bin Main  dictionary.txt ucs house cloth
+=====[ Result UCS (house -> cloth) ]=====
+1. house
+2. hoose
+3. hoosh
+4. toosh
+5. tooth
+6. cooth
+7. cloth
+Step taken: 6
+Word generated count: 5149
+Time taken: 101.249082ms
+
+java -cp bin Main  dictionary.txt greedy house cloth
+=====[ Result Greedy (house -> cloth) ]=====
+1. house
+2. hoose
+3. hoosh
+4. toosh
+5. tooth
+6. cooth
+7. cloth
+Step taken: 6
+Word generated count: 7
+Time taken: 4.63514ms
+
+java -cp bin Main  dictionary.txt astar house cloth
+=====[ Result A* (house -> cloth) ]=====
+1. house
+2. hoose
+3. hoosh
+4. hooch
+5. cooch
+6. cooth
+7. cloth
+Step taken: 6
+Word generated count: 38
+Time taken: 7.436535ms
+
+
+

@@ -1,0 +1,44 @@
+
+
+
+java -cp bin Main  dictionary.txt ucs base root
+=====[ Result UCS (base -> root) ]=====
+1. base
+2. bose
+3. hose
+4. host
+5. hoot
+6. root
+Step taken: 5
+Word generated count: 4447
+Time taken: 78.366559ms
+
+java -cp bin Main  dictionary.txt greedy base root
+=====[ Result Greedy (base -> root) ]=====
+1. base
+2. rase
+3. rose
+4. robe
+5. robs
+6. rocs
+7. rock
+8. rook
+9. root
+Step taken: 8
+Word generated count: 9
+Time taken: 5.36091ms
+
+java -cp bin Main  dictionary.txt astar base root
+=====[ Result A* (base -> root) ]=====
+1. base
+2. bose
+3. bosk
+4. book
+5. boot
+6. root
+Step taken: 5
+Word generated count: 52
+Time taken: 9.567182ms
+
+
+

@@ -1,0 +1,35 @@
+
+
+
+java -cp bin Main  dictionary.txt ucs red car
+=====[ Result UCS (red -> car) ]=====
+1. red
+2. rad
+3. cad
+4. car
+Step taken: 3
+Word generated count: 1653
+Time taken: 43.446398ms
+
+java -cp bin Main  dictionary.txt greedy red car
+=====[ Result Greedy (red -> car) ]=====
+1. red
+2. rad
+3. cad
+4. car
+Step taken: 3
+Word generated count: 4
+Time taken: 4.163355ms
+
+java -cp bin Main  dictionary.txt astar red car
+=====[ Result A* (red -> car) ]=====
+1. red
+2. rad
+3. cad
+4. car
+Step taken: 3
+Word generated count: 4
+Time taken: 4.812215ms
+
+
+

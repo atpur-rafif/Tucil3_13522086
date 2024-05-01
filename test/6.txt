@@ -1,0 +1,42 @@
+
+
+
+java -cp bin Main  dictionary.txt ucs green black
+=====[ Result UCS (green -> black) ]=====
+1. green
+2. greek
+3. breek
+4. breck
+5. bleck
+6. black
+Step taken: 5
+Word generated count: 429
+Time taken: 20.000594ms
+
+java -cp bin Main  dictionary.txt greedy green black
+=====[ Result Greedy (green -> black) ]=====
+1. green
+2. gleen
+3. gleek
+4. cleek
+5. cleck
+6. bleck
+7. black
+Step taken: 6
+Word generated count: 7
+Time taken: 4.614571ms
+
+java -cp bin Main  dictionary.txt astar green black
+=====[ Result A* (green -> black) ]=====
+1. green
+2. greek
+3. breek
+4. breck
+5. bleck
+6. black
+Step taken: 5
+Word generated count: 9
+Time taken: 5.476685ms
+
+
+

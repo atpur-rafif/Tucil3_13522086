@@ -1,0 +1,35 @@
+
+
+
+java -cp bin Main  dictionary.txt ucs eat run
+=====[ Result UCS (eat -> run) ]=====
+1. eat
+2. ean
+3. ran
+4. run
+Step taken: 3
+Word generated count: 1208
+Time taken: 37.266179ms
+
+java -cp bin Main  dictionary.txt greedy eat run
+=====[ Result Greedy (eat -> run) ]=====
+1. eat
+2. rat
+3. rut
+4. run
+Step taken: 3
+Word generated count: 4
+Time taken: 4.198113ms
+
+java -cp bin Main  dictionary.txt astar eat run
+=====[ Result A* (eat -> run) ]=====
+1. eat
+2. rat
+3. ran
+4. run
+Step taken: 3
+Word generated count: 6
+Time taken: 5.569035ms
+
+
+

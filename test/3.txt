@@ -1,0 +1,30 @@
+
+
+
+java -cp bin Main  dictionary.txt ucs kill jail
+=====[ Result UCS (kill -> jail) ]=====
+1. kill
+2. till
+3. tall
+4. tail
+5. jail
+Step taken: 4
+Word generated count: 1203
+Time taken: 39.262943ms
+
+java -cp bin Main  dictionary.txt greedy kill jail
+No path found
+
+java -cp bin Main  dictionary.txt astar kill jail
+=====[ Result A* (kill -> jail) ]=====
+1. kill
+2. gill
+3. gall
+4. gail
+5. jail
+Step taken: 4
+Word generated count: 23
+Time taken: 7.727327ms
+
+
+
