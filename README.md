@@ -1,3 +1,9 @@
+# Description
+
+This program is a solver for game named "Word Ladder", where the player need to change only one character (and make sure the new word exist in dictionary) to get from start word to the end word on each step. Algorithm used in this program is UCS, Greedy Best First Search, and A*. UCS algoritm always use the lowest weight node to expand, while greedy can't backtrack the search. A* exist as combination from this two algorithm to be more efficient and optimal.
+
+# Requirement
+Tested on openjdk 22
 
 # How to Compile
 
@@ -24,3 +30,8 @@ For help running the program, run without argument
 ```
 java -cp bin Main
 ```
+
+Note: File named "dictionary.txt" in this repository extracted from [this website](https://wordwormdormdork.com/)
+
+# Contributor
+Muhammad Atpur Rafif (13522086)
