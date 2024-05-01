@@ -5,7 +5,7 @@ class Main {
 			System.out.println(node);
 		};
 
-		Search bfs = new BFS();
+		Search bfs = new Astar();
 		System.out.println(bfs.search("myth", "lore", dictionary, visitor));
 	}
 }

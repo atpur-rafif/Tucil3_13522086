@@ -14,7 +14,8 @@ class Traverse {
 
 		HashSet<String> visited = new HashSet<>();
 
-		Node start = new Node(0, from);
+		int startCost = traverser.calculateCost(null, from);
+		Node start = new Node(startCost, from);
 		queue.add(start);
 
 		Node end = null;
