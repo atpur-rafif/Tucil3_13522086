@@ -59,7 +59,7 @@ public class CLI {
 	}
 
 	public static void run(String[] args) {
-		String dictionaryPath = args[1];
+		String dictionaryPath = args[0];
 		Dictionary dictionary = null;
 		try {
 			dictionary = new Dictionary(dictionaryPath);
@@ -68,7 +68,7 @@ public class CLI {
 			System.exit(1);
 		}
 
-		String rawAlgorithm = args[2];
+		String rawAlgorithm = args[1];
 		Algorithm algorithm = null;
 
 		if (rawAlgorithm.equalsIgnoreCase("greedy"))
@@ -82,8 +82,8 @@ public class CLI {
 			System.exit(1);
 		}
 
-		String from = args[3];
-		String to = args[4];
+		String from = args[2];
+		String to = args[3];
 		boolean error = false;
 		if (!dictionary.checkWord(from)) {
 			System.out.println("Start word \"" + from + "\" is not in dictionary");

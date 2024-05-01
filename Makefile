@@ -1,7 +1,7 @@
 RECUR_WILDCARD=$(wildcard $1$2) $(foreach d,$(wildcard $1*),$(call RECUR_WILDCARD,$d/,$2))
 SOURCE_CODE=$(call RECUR_WILDCARD,src,*.java)
 
-METHOD=cli
+# METHOD=cli
 DICTIONARY=dictionary.txt
 FROM=jail
 TO=free
