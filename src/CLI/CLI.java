@@ -64,7 +64,7 @@ public class CLI {
 		try {
 			dictionary = new Dictionary(dictionaryPath);
 		} catch (Exception e) {
-			System.out.println("Error when reading file " + dictionaryPath + " for dictionary");
+			System.err.println("Error when reading file " + dictionaryPath + " for dictionary");
 			System.exit(1);
 		}
 
@@ -78,7 +78,7 @@ public class CLI {
 		else if (rawAlgorithm.equalsIgnoreCase("astar"))
 			algorithm = Algorithm.Astar;
 		else {
-			System.out.println("Algoritm " + rawAlgorithm + " is not valid");
+			System.err.println("Algoritm " + rawAlgorithm + " is not valid");
 			System.exit(1);
 		}
 
@@ -86,12 +86,12 @@ public class CLI {
 		String to = args[3];
 		boolean error = false;
 		if (!dictionary.checkWord(from)) {
-			System.out.println("Start word \"" + from + "\" is not in dictionary");
+			System.err.println("Start word \"" + from + "\" is not in dictionary");
 			error = true;
 		}
 
 		if (!dictionary.checkWord(to)) {
-			System.out.println("End word \"" + to + "\" is not in dictionary");
+			System.err.println("End word \"" + to + "\" is not in dictionary");
 			error = true;
 		}
 
