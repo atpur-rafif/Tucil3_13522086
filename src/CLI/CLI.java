@@ -48,6 +48,7 @@ public class CLI {
 		for (int i = 0; i < result.size(); ++i) {
 			System.out.println((i + 1) + ". " + result.get(i));
 		}
+		System.out.println("Step taken: " + (result.size() - 1));
 		System.out.println("Word generated count: " + lambdaCapture.count);
 		System.out.println("Time taken: " + totalTime + "ms");
 	}
@@ -72,6 +73,7 @@ public class CLI {
 		else if (rawAlgorithm.equalsIgnoreCase("astar"))
 			algorithm = Algorithm.Astar;
 		else {
+			System.out.println("Algoritm " + rawAlgorithm + " is not valid");
 			System.exit(1);
 		}
 
