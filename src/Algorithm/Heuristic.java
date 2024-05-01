@@ -1,4 +1,6 @@
-class Heuristic {
+package Algorithm;
+
+public class Heuristic {
 	public static int calculateDistance(String from, String to) {
 		if (from.length() != to.length())
 			return Integer.MAX_VALUE;

@@ -1,4 +1,6 @@
-class Node implements Comparable<Node> {
+package Construct;
+
+public class Node implements Comparable<Node> {
 	private int cost;
 	private int depth = -1;
 	private String name;

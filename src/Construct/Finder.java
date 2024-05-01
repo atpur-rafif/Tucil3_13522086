@@ -1,10 +1,8 @@
+package Construct;
+
 import java.util.ArrayList;
 
-interface Visitor {
-	public void visit(Node node);
-}
-
-interface Finder {
+public interface Finder {
 	public ArrayList<String> search(String from, String to, Dictionary dictionary, Visitor visitor);
 
 	default public ArrayList<String> search(String from, String to, Dictionary dictionary) {

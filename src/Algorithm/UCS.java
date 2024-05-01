@@ -1,15 +1,17 @@
-import java.util.ArrayList;
+package Algorithm;
 
-class Greedy implements Finder {
+import java.util.ArrayList;
+import Construct.*;
+
+public class UCS implements Finder {
 	@Override
 	public ArrayList<String> search(String from, String to, Dictionary dictionary, Visitor visitor) {
 		return Traverse.find(from, to, dictionary, new Traverser() {
 			@Override
 			public int calculateCost(Node parentNode, String current) {
-				int distance = Heuristic.calculateDistance(current, to);
 				if (parentNode == null)
-					return distance;
-				return distance;
+					return 0;
+				return parentNode.getDepth() + 1;
 			}
 
 			@Override

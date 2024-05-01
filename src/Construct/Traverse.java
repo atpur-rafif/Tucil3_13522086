@@ -1,9 +1,11 @@
+package Construct;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.PriorityQueue;
 
-class Traverse {
+public class Traverse {
 	public static ArrayList<String> find(String from, String to, Dictionary dictionary, Traverser traverser) {
 		PriorityQueue<Node> queue = new PriorityQueue<>(new Comparator<Node>() {
 			@Override // Reverse priority queue, smaller cost, higher priority

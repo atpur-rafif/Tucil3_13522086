@@ -1,11 +1,13 @@
+package Construct;
+
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.util.HashSet;
 
-class Dictionary {
+public class Dictionary {
 	private HashSet<String> words = new HashSet<>();
 
-	Dictionary(String filepath) {
+	public Dictionary(String filepath) {
 		try {
 			FileReader fileReader = new FileReader(filepath);
 			BufferedReader reader = new BufferedReader(fileReader);

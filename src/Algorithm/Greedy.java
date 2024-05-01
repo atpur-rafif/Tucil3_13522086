@@ -1,6 +1,9 @@
-import java.util.ArrayList;
+package Algorithm;
 
-class Astar implements Finder {
+import java.util.ArrayList;
+import Construct.*;
+
+public class Greedy implements Finder {
 	@Override
 	public ArrayList<String> search(String from, String to, Dictionary dictionary, Visitor visitor) {
 		return Traverse.find(from, to, dictionary, new Traverser() {
@@ -9,7 +12,7 @@ class Astar implements Finder {
 				int distance = Heuristic.calculateDistance(current, to);
 				if (parentNode == null)
 					return distance;
-				return parentNode.getDepth() + 1 + distance;
+				return distance;
 			}
 
 			@Override

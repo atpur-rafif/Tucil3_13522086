@@ -1,3 +1,6 @@
+import Algorithm.*;
+import Construct.*;
+
 class Main {
 	public static void main(String[] args) {
 		Dictionary dictionary = new Dictionary("dictionary.txt");
@@ -5,7 +8,7 @@ class Main {
 			System.out.println(node);
 		};
 
-		Finder finder = new Greedy();
+		Finder finder = new Astar();
 		System.out.println(finder.search("myth", "lore", dictionary, visitor));
 	}
 }
