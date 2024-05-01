@@ -18,6 +18,7 @@ Program already compiled, running from base directory and dictionary.txt exist a
 ```
 java -cp bin Main dictionary.txt astar jail free
 ```
+Argument: `<executable name> <dictionary path> <algorithm (ucs/greedy/astar)> <start> <end>`
 
 For help running the program, run without argument  
 ```
