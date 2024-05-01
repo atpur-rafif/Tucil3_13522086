@@ -9,8 +9,6 @@ class Main {
 		Node start = new Node(0, from);
 		queue.add(start);
 
-		System.out.println(queue);
-
 		Node end = null;
 		while (queue.size() > 0) {
 			Node current = queue.remove();
@@ -37,7 +35,7 @@ class Main {
 					if (!dictionary.checkWord(newWord))
 						continue;
 
-					Node newNode = new Node(-current.getDepth(), newWord, current);
+					Node newNode = new Node(current.getDepth() + 1, newWord, current);
 					queue.add(newNode);
 				}
 			}
