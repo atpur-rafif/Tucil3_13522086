@@ -18,6 +18,7 @@ class Main {
 			System.out.println("""
 					How to use:
 					<executable name> <dictionary path> <algorithm> <start word> <end word>
+					Available algorithm: "ucs" "greedy" "astar"
 					Dictionary path relative from current working directory. Use quotes if directory include space
 					Start and end word can't contain space
 
