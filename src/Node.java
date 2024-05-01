@@ -4,9 +4,16 @@ class Node implements Comparable<Node> {
 	private String name;
 	private Node parent;
 
+	public Node(String start) {
+		this(0, start);
+	}
+
+	public Node(String current, Node parent) {
+		this(0, current, parent);
+	}
+
 	public Node(int cost, String start) {
-		this.cost = cost;
-		this.name = start;
+		this(cost, start, null);
 	}
 
 	public Node(int cost, String current, Node parent) {
