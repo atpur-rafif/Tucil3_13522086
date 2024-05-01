@@ -22,7 +22,7 @@ class Main {
 					Start and end word can't contain space
 
 					Example:
-					java Main cli dictionary.txt myth lore""");
+					java Main dictionary.txt myth lore""");
 			System.exit(1);
 		}
 
