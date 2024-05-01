@@ -84,6 +84,7 @@ public class CLI {
 
 		String from = args[2];
 		String to = args[3];
+
 		boolean error = false;
 		if (!dictionary.checkWord(from)) {
 			System.err.println("Start word \"" + from + "\" is not in dictionary");
@@ -95,7 +96,11 @@ public class CLI {
 			error = true;
 		}
 
-		if (error) {
+		if (error)
+			System.exit(1);
+
+		if (from.length() != to.length()) {
+			System.err.println("Word size don't match");
 			System.exit(1);
 		}
 
