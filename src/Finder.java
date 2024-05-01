@@ -4,7 +4,7 @@ interface Visitor {
 	public void visit(Node node);
 }
 
-interface Search {
+interface Finder {
 	public ArrayList<String> search(String from, String to, Dictionary dictionary, Visitor visitor);
 
 	default public ArrayList<String> search(String from, String to, Dictionary dictionary) {

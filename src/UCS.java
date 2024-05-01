@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-class BFS implements Search {
+class UCS implements Finder {
 	@Override
 	public ArrayList<String> search(String from, String to, Dictionary dictionary, Visitor visitor) {
 		return Traverse.find(from, to, dictionary, new Traverser() {

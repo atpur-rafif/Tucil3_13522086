@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-class Astar implements Search {
+class Astar implements Finder {
 	@Override
 	public ArrayList<String> search(String from, String to, Dictionary dictionary, Visitor visitor) {
 		return Traverse.find(from, to, dictionary, new Traverser() {
