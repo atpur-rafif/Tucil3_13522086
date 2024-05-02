@@ -31,7 +31,7 @@ For help running the program, run without argument
 java -cp bin Main
 ```
 
-Note: File named "dictionary.txt" in this repository extracted from [this website](https://wordwormdormdork.com/)
+Note: File named "dictionary.txt" in this repository extracted from [this website](https://wordwormdormdork.com/), only contains four word. For more complete dictionary, use [this](https://github.com/dwyl/english-words).
 
 # Contributor
 Muhammad Atpur Rafif (13522086)
